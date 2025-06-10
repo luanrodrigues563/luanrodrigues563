@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra a conexão vibrante entre o campo e a cidade no Paraná, uma relação que sustenta, inspira e transforma nossas vidas.">
+    <meta name="keywords" content="Paraná, campo, cidade, conexão, agricultura familiar, feiras orgânicas, sustentabilidade, cultura">
+    <title>Festejando a Conexão Campo-Cidade no Paraná</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #fdf6e8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url('https://www.transparenttextures.com/patterns/leaf.png');
+            opacity: 0.3;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            max-width: 700px;
+        }
+
+        nav {
+            background: linear-gradient(to right, #6b4e31, #8a5522);
+            padding: 1.2rem 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: #f4a261;
+            color: #264653;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            /* max-width: 1300px; */
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 3rem;
+            color: #2a9d8f;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #e76f51;
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+
+        .value {
+            background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            position: relative;
+            padding-bottom: 6rem;
+        }
+
+        .value .intro {
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .value .intro::before {
+            content: '🌾';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 2rem;
+            color: #2a9d8f;
+        }
+
+        .value .dimension {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+            border-left: 5px solid #f4a261;
+            background: #fff;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            gap: 50px;
+        }
+
+        .value .dimension img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            margin: 1.5rem auto;
+            display: block;
+            min-width: 300px;
+            min-height: 330px;
+            max-width: 300px;
+            max-height: 330px;
+            object-fit: cover;
+        }
+
+        .value .dimension h3 {
+            font-size: 2rem;
+            color: #264653;
+            margin: 1.5rem 0;
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        .value .dimension::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: url('https://www.transparenttextures.com/patterns/leaf.png');
+            opacity: 0.2;
+        }
+
+        .value .highlight {
+            font-style: italic;
+            color: #e76f51;
+            font-size: 1.6rem;
+            text-align: center;
+            margin: 4rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stories {
+            background: linear-gradient(to bottom, #e9ecef, #fdf6e8);
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .stories::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/woven-light.png');
+            opacity: 0.1;
+        }
+
+        .stories .story-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stories .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .stories .story-card-content {
+            padding: 2rem;
+            position: relative;
+        }
+
+        .stories .story-card-content h3 {
+            font-size: 1.7rem;
+            color: #264653;
+            margin-bottom: 1rem;
+        }
+
+        .stories .quote {
+            font-style: italic;
+            color: #e76f51;
+            font-size: 1.2rem;
+            padding: 1rem;
+            background: rgba(244, 162, 97, 0.1);
+            border-left: 4px solid #e76f51;
+            margin: 1rem 0;
+        }
+
+        .connections {
+            background: #264653;
+            color: #fff;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connections h2 {
+            color: #f4a261;
+        }
+
+        .connections .connection-item {
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .connections .connection-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #f4a261;
+        }
+
+        .connections .connection-item h3 {
+            font-size: 1.8rem;
+            color: #f4a261;
+            margin-bottom: 1rem;
+        }
+
+        .connections .connection-item p {
+            max-width: 600px;
+        }
+
+        .connections .connection-item::before {
+            content: '🌿';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+
+        .events {
+            background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .events .event-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .events .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .events .event-card-content {
+            padding: 1.5rem;
+            background: linear-gradient(to top, #fdf6e8, #fff);
+        }
+
+        .events .event-card-content h3 {
+            font-size: 1.6rem;
+            color: #264653;
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            background: linear-gradient(to bottom, #2a9d8f, #1f776d);
+            color: #fff;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .about h2 {
+            color: #fff;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        .about .manifesto {
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem;
+            color: #f4a261;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #264653;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8rem;
+            }
+
+            header p {
+                font-size: 1.3rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .value .dimension img {
+                max-width: 250px;
+            }
+
+            .connections .connection-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .dimension {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <h1>Festejando a Conexão Campo-Cidade no Paraná</h1>
+        <p>Uma relação vibrante que sustenta nossas vidas, une nossas histórias e ilumina o futuro do Paraná.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#value">Valor</a></li>
+            <li><a href="#stories">Histórias</a></li>
+            <li><a href="#connections">Conexões</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="#about">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <section id="value" class="value">
+        <h2>O Valor da Conexão Campo-Cidade no Paraná</h2>
+        <div class="intro">
+            <p>No Paraná, a conexão entre o campo e a cidade é o coração de nossa identidade. É o agricultor de Londrina colhendo milho, a feirante de Curitiba vendendo pinhão, o consumidor de Maringá escolhendo orgânicos. Essa relação sustenta nossa alimentação, nossa cultura e nossa economia. No estado, 80% das propriedades rurais são familiares, produzindo 70% dos alimentos que chegam às nossas mesas. Vamos explorar o valor dessa conexão, celebrando o Paraná que planta, colhe e sonha junto.</p>
+        </div>
+
+        <div class="dimension">
+            <article>
+                <h3>A Raiz de Tudo: O Campo Paranaense</h3>
+                <p>O Paraná é um gigante agrícola, líder em soja, milho e trigo. Mas são os pequenos produtores, com suas roças de feijão, mandioca e hortaliças, que alimentam nossas cidades. Em regiões como Toledo e Pato Branco, famílias cultivam com técnicas tradicionais, enfrentando chuvas e secas para garantir o pão de cada dia. Esses heróis do campo produzem não só comida, mas também algodão, madeira e etanol, conectando a terra à vida urbana.</p>
+                <p>Valorizar esses produtores é reconhecer que sem o campo paranaense, nossas cidades não prosperam. Cada saco de feijão na feira é um testemunho de dedicação e sabedoria rural.</p>
+            </article>
+            <img src="https://www.correiodopovo.com.br/image/contentid/policy:1.696436:1677681709/image.jpg?f=2x1&q=0.9&w=1600&$p$f$q$w=279ceb1" alt="Campo de milho no Paraná">
+        </div>
+
+        <div class="dimension">
+            <img src="https://assets.brasildefato.com.br/2024/09/image_processing20240325-1215124-2h8gkn.webp" alt="Feira orgânica em Curitiba">
+            <article>
+                <h3>A Cidade que Valoriza e Transforma</h3>
+                <p>Em cidades como Curitiba e Londrina, os produtos do campo ganham vida. No Mercado Municipal de Curitiba, hortaliças frescas viram saladas, e o pinhão se torna prato típico. Feiras orgânicas, como a do Largo da Ordem, conectam produtores de Colombo e São José dos Pinhais diretamente aos consumidores, movimentando milhões de reais por ano. Essas trocas fortalecem a economia local e valorizam o trabalho rural.</p>
+                <p>Quando um curitibano escolhe um tomate orgânico ou um morador de Maringá compra direto do produtor, ele está investindo no campo, criando um ciclo de prosperidade que une interior e metrópole.</p>
+            </article>
+        </div>
+
+        <div class="dimension">
+            <article>
+                <h3>Uma Ponte Cultural: Tradições do Paraná</h3>
+                <p>A conexão campo-cidade no Paraná é uma ponte cultural. A Festa da Uva em Colombo traz o sabor rural para a região metropolitana. O pinhão, colhido nas araucárias, vira sapecada nas festas juninas de Ponta Grossa. A cerâmica de Witmarsum e o artesanato de Morretes enfeitam casas urbanas. Essas tradições mostram como o campo molda a identidade paranaense.</p>
+                <p>Em contrapartida, cidades como Curitiba reinterpretam essas raízes, com chefs transformando receitas rurais em alta gastronomia e festivais misturando música caipira com ritmos urbanos. Essa troca celebra a diversidade do Paraná.</p>
+            </article>
+            <img src="https://uploads.ric.com.br/uploads/2024/01/festa-da-uva-4.jpg" alt="Festa da Uva em Colombo">
+        </div>
+
+        <div class="dimension">
+            <img src="https://www.aen.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2023-11/hortacomunitaria_027.jpg" alt="Agricultura orgânica no Paraná">
+            <article>
+                <h3>Sustentabilidade: Um Futuro Verde</h3>
+                <p>O Paraná lidera em sustentabilidade com o programa Paraná Orgânico, que incentiva a agricultura familiar a adotar métodos ecológicos. Em cidades como Cascavel, produtores usam agroflorestas para preservar o solo. Consumidores urbanos, ao escolherem feiras orgânicas em Londrina ou hortas comunitárias em Curitiba, apoiam esse movimento, reduzindo o impacto ambiental.</p>
+                <p>Essa parceria é essencial para o futuro. Cada compra consciente em uma feira paranaense é um passo para solos férteis e rios limpos, unindo campo e cidade em prol do planeta.</p>
+            </article>
+        </div>
+
+        <div class="dimension">
+            <article>
+                <h3>Comunidade: O Coração do Paraná</h3>
+                <p>A conexão campo-cidade no Paraná é sobre pessoas. É o agricultor de Toledo entregando hortaliças frescas, a feirante de Paranaguá sorrindo ao vender pinhão, o consumidor de Foz do Iguaçu escolhendo orgânicos. Feiras como a do Produtor em Cascavel criam laços humanos, onde histórias e sonhos são trocados junto com produtos.</p>
+                <p>Essas conexões fortalecem comunidades, unindo o interior e a metrópole em uma rede de apoio. Valorizar essa relação é celebrar o que faz do Paraná um estado único.</p>
+            </article>
+            <img src="https://catve.com/images/2022/05/22/1653221551628a28af2259b.jpg" alt="Feira do Produtor em Cascavel">
+        </div>
+
+        <p class="highlight">No Paraná, a conexão campo-cidade é nossa força. É o campo que planta, a cidade que valoriza, e juntos, construímos um futuro sustentável.</p>
+    </section>
+
+    <section id="stories" class="stories">
+        <h2>Histórias do Paraná que Inspiram</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="story-card">
+                <div class="story-card-content">
+                    <h3>Feira Orgânica do Largo da Ordem</h3>
+                    <p>Em Curitiba, a Feira do Largo da Ordem conecta 50 produtores rurais a milhares de consumidores, oferecendo hortaliças, pinhão e orgânicos com sustentabilidade.</p>
+                    <p class="quote">“Nossa feira leva o campo ao coração de Curitiba.”</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-card-content">
+                    <h3>Cooperativa de Toledo</h3>
+                    <p>A Cooperativa Agropecuária de Toledo une 200 famílias para levar feijão e milho às cidades do Oeste paranaense, promovendo economia e qualidade.</p>
+                    <p class="quote">“Do campo de Toledo às mesas urbanas, juntos prosperamos.”</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-card-content">
+                    <h3>Horta Comunitária de Curitiba</h3>
+                    <p>Em bairros como Cajuru, hortas comunitárias aproximam a cidade do campo, com moradores cultivando hortaliças e fortalecendo laços locais.</p>
+                    <p class="quote">“Nossa horta une a cidade ao campo com sustentabilidade.”</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-card-content">
+                    <h3>Festa da Uva de Colombo</h3>
+                    <p>Em Colombo, a Festa da Uva celebra o trabalho rural com vinhos artesanais, conectando produtores às famílias urbanas da região metropolitana.</p>
+                    <p class="quote">“A uva de Colombo une campo e cidade em festa.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connections" class="connections">
+        <h2>Facetas da Conexão no Paraná</h2>
+        <div class="connection-item">
+            <img src="https://www.folhadelondrina.com.br/img/Artigo-Destaque/3270000/400x0/2-edicao-da-Festa-Rural-do-Distrito-de-Maravilha-e0327004900202503061523-14.webp?fallback=https%3A%2F%2Fwww.folhadelondrina.com.br%2Fimg%2FArtigo-Destaque%2F3270000%2F2-edicao-da-Festa-Rural-do-Distrito-de-Maravilha-e0327004900202503061523.jpg%3Fxid%3D6166377&xid=6166377" alt="Festa rural no Paraná">
+            <div>
+                <h3>Cultura</h3>
+                <p>A Festa da Uva e o pinhão nas sapecadas juninas trazem o campo às cidades do Paraná, celebrando tradições que unem gerações.</p>
+            </div>
+        </div>
+        <div class="connection-item">
+            <img src="https://imagens.ebc.com.br/rbY0EzWIp8KkVioEw9yJgCkQvQI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/rvrsa_abr_190720120923.jpg?itok=qL0LvjJe" alt="Feira de orgânicos">
+            <div>
+                <h3>Economia</h3>
+                <p>O campo paranaense fornece milho, feijão e orgânicos, enquanto cidades como Curitiba criam mercados que sustentam produtores.</p>
+            </div>
+        </div>
+        <div class="connection-item">
+            <img src="https://www.idrparana.pr.gov.br/sites/iapar/arquivos_restritos/files/styles/escala_500_altura_/public/imagem/2024-07/capa.jpg?itok=pf7180Ig" alt="Agricultura sustentável">
+            <div>
+                <h3>Sustentabilidade</h3>
+                <p>Programas como Paraná Orgânico e hortas comunitárias unem campo e cidade por um futuro mais verde.</p>
+            </div>
+        </div>
+        <div class="connection-item">
+            <img src="https://www.idrparana.pr.gov.br/sites/iapar/arquivos_restritos/files/imagem/2024-08/feira_paranagua4.jpg" alt="Feira comunitária">
+            <div>
+                <h3>Comunidade</h3>
+                <p>Feiras como a do Produtor em Cascavel criam laços entre agricultores e consumidores, fortalecendo o Paraná.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Celebrações Paranaenses</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="event-card">
+                <div class="event-card-content">
+                    <h3>Feira do Produtor de Cascavel</h3>
+                    <p>Data: 25 de junho de 2025<br>Produtores rurais trazem orgânicos e pinhão para a cidade, unindo campo e consumidores.</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-card-content">
+                    <h3>ExpoLondrina 2025</h3>
+                    <p>Data: 10 de julho de 2025<br>Um dos maiores eventos agropecuários do Paraná celebra a conexão campo-cidade.</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-card-content">
+                    <h3>Festa da Uva de Colombo</h3>
+                    <p>Data: 15 de agosto de 2025<br>Produtores rurais e famílias urbanas celebram a colheita com vinhos e artesanato.</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-card-content">
+                    <h3>Feira Orgânica de Maringá</h3>
+                    <p>Data: 5 de setembro de 2025<br>Hortaliças e produtos locais conectam o campo à cidade em um dia de trocas.</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; font-size: 1.3rem; color: #264653;">Viva a conexão campo-cidade no Paraná!</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Nossa Missão</h2>
+        <p>Festejando a Conexão Campo-Cidade no Paraná é um movimento para celebrar a relação entre o interior e as cidades do estado. Queremos valorizar o agricultor de Toledo, a feirante de Curitiba e o consumidor de Londrina, construindo um futuro sustentável e unido. Junte-se a nós!</p>
+        <p class="manifesto">No Paraná, o campo planta, a cidade valoriza, juntos crescemos.</p>
+    </section>
+
+    <footer>
+        <p>2025 Agrinho Categoria Programação. Festejando a Conexão Campo-Cidade no Paraná.</p>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
