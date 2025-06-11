@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fdf6e8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('https://www.transparenttextures.com/patterns/leaf.png');
+    opacity: 0.3;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.5rem;
+    max-width: 700px;
+}
+
+nav {
+    background: linear-gradient(to right, #6b4e31, #8a5522);
+    padding: 1.2rem 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: #f4a261;
+    color: #264653;
+}
+
+section {
+    padding: 5rem 2rem;
+    /* max-width: 1300px; */
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #2a9d8f;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #e76f51;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+.value {
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.value .intro {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.value .intro::before {
+    content: '🌾';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #2a9d8f;
+}
+
+.value .dimension {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-left: 5px solid #f4a261;
+    background: #fff;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 50px;
+}
+
+.value .dimension img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    margin: 1.5rem auto;
+    display: block;
+    min-width: 300px;
+    min-height: 330px;
+    max-width: 300px;
+    max-height: 330px;
+    object-fit: cover;
+}
+
+.value .dimension h3 {
+    font-size: 2rem;
+    color: #264653;
+    margin: 1.5rem 0;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.value .dimension::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: url('https://www.transparenttextures.com/patterns/leaf.png');
+    opacity: 0.2;
+}
+
+.value .highlight {
+    font-style: italic;
+    color: #e76f51;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 4rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stories {
+    background: linear-gradient(to bottom, #e9ecef, #fdf6e8);
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.stories::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/woven-light.png');
+    opacity: 0.1;
+}
+
+.stories .story-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stories .story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stories .story-card-content {
+    padding: 2rem;
+    position: relative;
+}
+
+.stories .story-card-content h3 {
+    font-size: 1.7rem;
+    color: #264653;
+    margin-bottom: 1rem;
+}
+
+.stories .quote {
+    font-style: italic;
+    color: #e76f51;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background: rgba(244, 162, 97, 0.1);
+    border-left: 4px solid #e76f51;
+    margin: 1rem 0;
+}
+
+.connections {
+    background: #264653;
+    color: #fff;
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.connections h2 {
+    color: #f4a261;
+}
+
+.connections .connection-item {
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.connections .connection-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 2px solid #f4a261;
+}
+
+.connections .connection-item h3 {
+    font-size: 1.8rem;
+    color: #f4a261;
+    margin-bottom: 1rem;
+}
+
+.connections .connection-item p {
+    max-width: 600px;
+}
+
+.connections .connection-item::before {
+    content: '🌿';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.events {
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.events .event-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.events .event-card:hover {
+    transform: translateY(-10px);
+}
+
+.events .event-card-content {
+    padding: 1.5rem;
+    background: linear-gradient(to top, #fdf6e8, #fff);
+}
+
+.events .event-card-content h3 {
+    font-size: 1.6rem;
+    color: #264653;
+    margin-bottom: 1rem;
+}
+
+.about {
+    background: linear-gradient(to bottom, #2a9d8f, #1f776d);
+    color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.about h2 {
+    color: #fff;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.about .manifesto {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    color: #f4a261;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+footer {
+    background: #264653;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .value .dimension img {
+        max-width: 250px;
+    }
+
+    .connections .connection-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dimension {
+        flex-direction: column;
+    }
+}
